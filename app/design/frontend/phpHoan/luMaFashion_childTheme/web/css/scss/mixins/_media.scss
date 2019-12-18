@@ -1,0 +1,57 @@
+$tablet-width: 768px;
+$small-desktop-width: 992px;
+$medium-desktop-width: 1200px;
+
+@mixin phone {
+  @media (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$small-desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet-and-phone {
+  @media (max-width: #{$small-desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin small-desktop-and-tablet {
+  @media (max-width: #{$medium-desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin small-desktop {
+  @media (min-width: #{$small-desktop-width}) and (max-width: #{$medium-desktop-width - 1px}){
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$medium-desktop-width}) {
+    @content;
+  }
+}
+
+@mixin desktop-and-tablet {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop-and-small-desktop {
+  @media (min-width: #{$small-desktop-width}) {
+    @content
+  }
+}
+
+@mixin print {
+  @media print {
+    @content;
+  }
+}

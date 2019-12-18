@@ -1,0 +1,40 @@
+ 
+header {
+    background-color: #000;
+    // .header{
+
+    // }
+    .logo{
+        margin-top:0
+    }
+}
+.block-search-custom{
+float: none !important;
+margin: 0 auto;
+padding: 0;
+width: 300px !important;
+form{
+    position: relative;
+    #search-tags{
+        position: absolute;
+        width: auto;
+        height: 85%;
+        top: 5%;
+        border: 1px solid #bfbfbf;
+        border-top: 0;
+        border-bottom: 0;
+        right: 40px;
+        // font-weight: bold;
+    }
+}
+.control{
+    clear: none;
+}
+
+input{
+    border-radius: 20px;
+    position: relative;
+    left: 0;
+    padding-right: 120px !important;
+}
+}

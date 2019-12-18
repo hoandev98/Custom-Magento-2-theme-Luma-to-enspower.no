@@ -1,0 +1,37 @@
+@mixin clear-after{
+    &:after{
+        content:"";
+        display: block;
+        clear:both;
+    }
+}
+
+
+@mixin placeholder {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+}
+
+@mixin no-select-arrow {
+-moz-appearance: none;
+-webkit-appearance: none;
+appearance: none;
+&::-ms-expand {
+    display: none;
+}
+}
+
+@mixin hide-spin-button {
+    &::-webkit-inner-spin-button, 
+    &::-webkit-outer-spin-button { 
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        margin: 0; 
+    }
+    & {
+        -moz-appearance: textfield;
+    }
+}

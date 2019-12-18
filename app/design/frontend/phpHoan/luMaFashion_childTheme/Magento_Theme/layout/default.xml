@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+       <head>
+        <css src="css/netpower.css"/>
+    </head>
+    <body>
+       <referenceBlock name="logo">
+         <arguments>
+            <argument name="logo_file" xsi:type="string">images/Lenspower_headerlogo.png</argument>
+            <argument name="logo_alt" xsi:type="string">lenspower-logo</argument>
+            <argument name="logo_img_width" xsi:type="number">250</argument>
+            <argument name="logo_img_height" xsi:type="number">30</argument>
+         </arguments>
+       </referenceBlock>
+<!--        
+       <referenceContainer name="header-wrapper">
+            <block class="Magento\Framework\View\Element\Template" name="advanced-search-link" template="Magento_CatalogSearch::advanced/link.phtml" />
+
+        </referenceContainer> -->
+   </body>
+</page>
