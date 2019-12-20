@@ -12,10 +12,9 @@
             <argument name="logo_img_height" xsi:type="number">30</argument>
          </arguments>
        </referenceBlock>
-<!--        
-       <referenceContainer name="header-wrapper">
-            <block class="Magento\Framework\View\Element\Template" name="advanced-search-link" template="Magento_CatalogSearch::advanced/link.phtml" />
-
-        </referenceContainer> -->
+        <referenceContainer name="footer">
+            <referenceBlock name="footer_links" remove="true" />
+            <block class="Magento\Framework\View\Element\Template" name="footer.navigation.menu" after="form.subscribe" template="Magento_Theme::footer_menu.phtml"/>
+        </referenceContainer>
    </body>
 </page>

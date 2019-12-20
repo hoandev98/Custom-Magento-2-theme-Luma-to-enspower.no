@@ -1,0 +1,41 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/** @var \Magento\Newsletter\Block\Subscribe $block */
+$linkImageFb =  $block->getViewFileUrl('images/facebook-font-awesome.png');
+$linkImageIg =  $block->getViewFileUrl('images/instagram-font-awesome.png');
+
+?>
+<div class="block newsletter">
+    <div class="title title-form-email"><strong><?= $block->escapeHtml(__('MOTTA NYHETSBREV')) ?></strong></div>
+    <div class="content">
+        <form class="form subscribe"
+            novalidate
+            action="<?= $block->escapeUrl($block->getFormActionUrl()) ?>"
+            method="post"
+            data-mage-init='{"validation": {"errorClass": "mage-error"}}'
+            id="newsletter-validate-detail">
+            <div class="field newsletter">
+                <label class="label" for="newsletter"><span><?= $block->escapeHtml(__('Sign Up for Our Newsletter:')) ?></span></label>
+                <div class="control">
+                    <input name="email" type="email" id="newsletter"
+                                placeholder="<?= $block->escapeHtml(__('Fyll inn e post')) ?>"
+                                data-validate="{required:true, 'validate-email':true}"/>
+                </div>
+            </div>
+            <div class="actions">
+                <button class="action subscribe primary" title="<?= $block->escapeHtmlAttr(__('Abonner')) ?>" type="submit">
+                    <span><?= $block->escapeHtml(__('Abonner')) ?></span>
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="block-social">
+        <span>FØLG OSS</span>
+        <img src="<?php echo $linkImageFb?>" alt="connect facebook">
+        <img src="<?php echo $linkImageIg?>" alt="connect instagram">
+    </div>
+</div>
