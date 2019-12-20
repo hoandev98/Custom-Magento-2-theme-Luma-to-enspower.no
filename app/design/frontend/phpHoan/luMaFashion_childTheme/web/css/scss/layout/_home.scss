@@ -5,15 +5,84 @@ header {
 
     // }
     .logo{
-        margin-top:0
+        margin-top:0;
+        @include tablet{
+            margin-top:7px;
+            max-width: 200px;
+            max-height: 20px;
+            img{
+                width: auto;
+                height: auto;
+            }
+        }
+        @include phone{
+            max-width: 60%;
+            max-height: 20px;
+            margin-top: 15px;
+            margin-left: 20%;
+            img{
+                width: auto;
+                height: auto;
+            }
+        }
+    }
+    .minicart-wrapper {
+        @include phone{
+            right: 5px;
+        }
+        .action{
+            position: relative;
+            .text-add-cart{
+                padding-left: 15px;
+                margin-top: 5px;
+                color: #fff;
+                position: relative;
+                top: 2px;
+                @include phone{
+                    display: none;
+                }
+            }
+            .counter{
+                position: absolute;
+                left: 23px;
+                border-radius: 100% !important;
+                height: 17px !important;
+                min-width: 15px!important;
+                line-height: 16px !important;
+                margin: 0 !important;
+                .counter-number{
+                    color: #000;
+                }
+            }
+        }
+        .showcart:before {
+            color: #fff !important;
+            font-size: 30px !important;
+        }
     }
 }
 .block-search-custom{
 float: none !important;
 margin: 0 auto;
 padding: 0;
-width: 300px !important;
+width: 400px !important;
+    @include  tablet{
+        width: 300px !important;
+    }
+    @include phone{
+        width: 100%!important;
+        display: block;
+        clear: both;
+    }
 form{
+    .label{
+        @include phone{
+            position: absolute;
+            right: 0;
+            z-index: 10;
+            top: 20px;
+        }
+    }
     position: relative;
     #search-tags{
         position: absolute;
@@ -24,6 +93,12 @@ form{
         border-top: 0;
         border-bottom: 0;
         right: 40px;
+        @include tablet{
+            display: none;
+        }
+        @include phone{
+            display: none;
+        }
         // font-weight: bold;
     }
 }
@@ -36,5 +111,8 @@ input{
     position: relative;
     left: 0;
     padding-right: 120px !important;
+    @include phone{
+        padding-right: 32px !important;
+    }
 }
 }

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="checkout_cart_sidebar_item_renderers"/>
+    <update handle="checkout_cart_sidebar_item_price_renderers"/>
+    <update handle="checkout_cart_sidebar_total_renderers"/>
+    <body>
+        <referenceBlock name="head.components">
+            <block class="Magento\Framework\View\Element\Js\Components" name="checkout_page_head_components" template="Magento_Checkout::js/components.phtml"/>
+        </referenceBlock>
+        <referenceContainer name="header-wrapper">
+            <block name="formloginheader" as="formloginheader" after="logo" template="Magento_loginHead::form/formlogin.phtml">
+            </block>
+            <block class="Magento\Checkout\Block\Cart\Sidebar" name="minicart" as="minicart" after="formloginheader" template="Magento_Checkout::cart/minicart.phtml">
+
+            </block>
+        </referenceContainer>
+    </body>
+</page>
