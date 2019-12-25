@@ -298,3 +298,57 @@ background-color: #000 !important;
         }
 
 }
+.store-info{
+    .besttll{
+        .bar-wrapper{
+            border-right: none !important;
+        }
+    }
+    .free-shipping, .prisga, .besttll{
+        //text-align: center;
+        display: inline-block;
+        width: 33%;
+
+        .bar-wrapper{
+            height: auto;
+            justify-content: center;
+            text-align: center;
+            border-right: 1px solid #ff5b24 ;
+        @include  phone{
+            border-right: none;
+        }
+        }
+
+        .img-area{
+            display: inline-block;
+            margin-right: 20px;
+            @include tablet{
+                margin-right: 10px;
+            }
+            @include phone{
+                display: block;
+                margin-right: 0;
+            }
+        }
+        .text-area{
+            h3{
+                margin: 0;
+                @include phone{
+                    font-size: 12px;
+                }
+            }
+            display: inline-block;
+            text-align: justify;
+            @include phone{
+                .hidden-xs{
+                    display: none;
+                }
+            }
+        }
+    }
+    .besttll{
+        @include phone{
+            width: 31%;
+        }
+    }
+}
