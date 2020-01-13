@@ -208,7 +208,7 @@ background-color: #000 !important;
             margin-top: 30px;
         }
         span{
-            width: 20%;
+            width: 25%;
             display: block;
             float: left;
             margin-top:7px;
@@ -299,6 +299,13 @@ background-color: #000 !important;
 
 }
 .store-info{
+    padding: 20px;
+    @include tablet{
+       padding: 0;
+    }
+    @include phone{
+        padding: 0;
+    }
     .besttll{
         .bar-wrapper{
             border-right: none !important;
@@ -351,4 +358,46 @@ background-color: #000 !important;
             width: 31%;
         }
     }
+}
+.left-side-home{
+    width: 25%;
+    @include tablet{
+        width: 100%;
+    }
+    @include phone{
+        width: 100%;
+    }
+    .catagory-home{
+        h2{
+            font-weight: bold;
+            @include tablet{
+                margin: 40px 0;
+                text-align: center;
+            }
+        }
+        ul{
+            padding-left: 0;
+            border: 1px solid #c9c9c9;
+            @include tablet{
+                border: 0;
+            }
+            li{
+                width: 43%;
+                @include tablet{
+                        width: 22%;
+                }
+                display: inline-block;
+                padding: 15px 0 0 15px;
+                a{
+                    color: #000;
+                    text-decoration: underline;
+                    font-weight: bold;
+                }
+            }
+        }
+
+    }
+}
+.copyright{
+    background-color: #000;
 }
